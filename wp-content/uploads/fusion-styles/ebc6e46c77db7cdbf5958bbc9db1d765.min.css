@@ -34061,7 +34061,10 @@ table {
 }
 
 .fusion-body .fusion-title a {
-  color: var(--awb-link-color)
+  color: var(--awb-link-color);
+  padding-left: 30px;
+  background: url('../../../uploads/circle.png') no-repeat left center;
+  background-size: contain;
 }
 
 .fusion-body .fusion-title a:hover {
