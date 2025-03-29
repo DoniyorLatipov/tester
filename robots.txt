@@ -1,0 +1,34 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Allow: /wp-content/uploads/
+Allow: /
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /404.php
+
+Disallow: /*.php$
+Disallow: /*.cgi$
+Disallow: /*.pl$
+Disallow: /*.txt$
+Disallow: /*.log$
+
+
+Sitemap: https://acarkansemenov.com/sitemap.xml
+
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: PR-CY-BOT
+Allow: /
+
+

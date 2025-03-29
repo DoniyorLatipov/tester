@@ -1,0 +1,54 @@
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^post([0-9]+)$ post.php?id=$1 [L,QSA]
+# добавляем страницу 404 на ошибку пользователя
+
+
+
+# Убираем расширение .html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+
+# <IfModule mod_headers.c>
+#     # Кэширование всех файлов на 1 месяц
+#     <FilesMatch "\.(.*)$">
+#         Header set Cache-Control "max-age=604800, public"
+#     </FilesMatch>
+
+#     # Исключение для динамических файлов (например, PHP)
+#     <FilesMatch "\.(php)$">
+#         Header set Cache-Control "no-cache, no-store, must-revalidate"
+#         Header set Pragma "no-cache"
+#         Header set Expires 0
+#     </FilesMatch>
+# </IfModule>
+
+
+
+RewriteCond %{THE_REQUEST} /index\.php [NC]
+RewriteRule ^(.*?)index\.php$ /$1 [L,R=301,NC]
+
+
+RewriteCond %{HTTP_HOST} ^www\.acarkansemenov\.com$ [NC]
+RewriteRule ^(.*)$ https://acarkansemenov.com/$1 [L,R=301]
+
+
+
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*?)index\.html$ /$1 [L,R=301,NC]
+
+
+
+
+# Убираем расширение .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+RewriteRule ^([a-zA-Z0-9-]+)$ $1.php [L]
+
+ErrorDocument 404 /404.php
