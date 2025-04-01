@@ -56,13 +56,13 @@
 
                                     <div class="fusion-search-field search-field">
                                         <label><span class="screen-reader-text">Search for:</span>
-                                            <input type="search" value="" name="s" class="s" placeholder="Search..."
+                                            <input type="search" name="s" class="s" placeholder="Search..."
                                                 required="" aria-required="true" aria-label="Search...">
                                         </label>
                                     </div>
                                     <div class="fusion-search-button search-button">
                                         <input type="submit" class="fusion-search-submit searchsubmit"
-                                            aria-label="Search" value="">
+                                            aria-label="Search">
                                     </div>
 
 
@@ -115,9 +115,9 @@
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3531"
                                 data-item-id="3531"><a href="post51" class="fusion-textcolor-highlight"><span
                                         class="menu-text">Лоббизм</span></a></li>
-                            <li id="menu-item-3531"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3531"
-                                data-item-id="3531"><a href="contact" class="fusion-textcolor-highlight"><span
+                            <li id="menu-item-3530"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3530"
+                                data-item-id="3530"><a href="contact" class="fusion-textcolor-highlight"><span
                                         class="menu-text">Контакты</span></a></li>
                         </ul>
                     </nav>
